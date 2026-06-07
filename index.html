@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desert Rock Airstrip — Departure &amp; Arrival Archive</title>
+<style>
+  /* minimal structure only — two columns, monospace for alignment */
+  body { font-family: monospace; margin: 20px; }
+  .cols { display: flex; gap: 48px; }
+  .col { flex: 1; min-width: 0; }
+  .row { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  hr { border: none; border-top: 1px solid #000; }
+  @media (max-width: 600px) { .cols { flex-direction: column; gap: 28px; } }
+</style>
+
+<h2>Desert Rock Airstrip. Departure &amp; Arrival Archive</h2>
+<p id="meta">loading…</p>
+<hr>
+
+<div class="cols">
+  <div class="col">
+    <h3>Departures</h3>
+    <div id="departures"></div>
+  </div>
+  <div class="col">
+    <h3>Arrivals</h3>
+    <div id="arrivals"></div>
+  </div>
+</div>
+
+<script>
+function t(ts){
+  if(!ts) return "----------------";
+  return new Date(ts*1000).toISOString().replace("T"," ").slice(0,16);
+}
+function line(e){
+  const ts = e.direction === "arrival" ? (e.last_seen||e.first_seen) : (e.first_seen||e.last_seen);
+  const arrow = e.direction === "arrival" ? "from" : "to";
+  return `<div class="row">${t(ts)} &nbsp; ${e.callsign||"—"} &nbsp; ${e.icao24||"—"} &nbsp; ${arrow} ${e.other_airport||"—"}</div>`;
+}
+async function load(){
+  let d = {airport:"KDRA", updated:null, events:[]};
+  try {
+    const r = await fetch("./data/flights.json", {cache:"no-store"});
+    if (r.ok) d = await r.json();
+  } catch(e) {}
+
+  const dep = d.events.filter(e=>e.direction==="departure");
+  const arr = d.events.filter(e=>e.direction==="arrival");
+  document.getElementById("meta").textContent =
+    `Airport ${d.airport} · ${d.events.length} events archived · updated ` +
+    (d.updated ? d.updated.replace("T"," ").slice(0,16)+" UTC" : "never");
+  document.getElementById("departures").innerHTML =
+    dep.length ? dep.map(line).join("") : "<div class='row'>(none recorded yet)</div>";
+  document.getElementById("arrivals").innerHTML =
+    arr.length ? arr.map(line).join("") : "<div class='row'>(none recorded yet)</div>";
+}
+load();
+</script>
