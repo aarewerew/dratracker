@@ -1,7 +1,95 @@
 {
   "airport": "KDRA",
-  "updated": "2026-06-18T23:13:46.834472+00:00",
+  "updated": "2026-06-19T05:30:14.361043+00:00",
   "events": [
+    {
+      "direction": "departure",
+      "icao24": "abf0fd",
+      "callsign": "JANET36",
+      "first_seen": 1781838973,
+      "last_seen": 1781840038,
+      "other_airport": "\u2014"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abf0fd",
+      "callsign": "JANET25",
+      "first_seen": 1781833033,
+      "last_seen": 1781833632,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "a4207f",
+      "callsign": "JANET83",
+      "first_seen": 1781831423,
+      "last_seen": 1781832007,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abf0fd",
+      "callsign": "JANET15",
+      "first_seen": 1781826027,
+      "last_seen": 1781826651,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abcac9",
+      "callsign": "JANET59",
+      "first_seen": 1781824687,
+      "last_seen": 1781825302,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abf0fd",
+      "callsign": "JANET39",
+      "first_seen": 1781817705,
+      "last_seen": 1781818342,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abcac9",
+      "callsign": "JANET47",
+      "first_seen": 1781813039,
+      "last_seen": 1781813683,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "a60f7a",
+      "callsign": "N49TT",
+      "first_seen": 1781811993,
+      "last_seen": 1781813234,
+      "other_airport": "KVGT"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abcac9",
+      "callsign": "JANET53",
+      "first_seen": 1781797421,
+      "last_seen": 1781798051,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abf0fd",
+      "callsign": "JANET65",
+      "first_seen": 1781785602,
+      "last_seen": 1781786251,
+      "other_airport": "KLAS"
+    },
+    {
+      "direction": "arrival",
+      "icao24": "abcac9",
+      "callsign": "JANET55",
+      "first_seen": 1781780562,
+      "last_seen": 1781781229,
+      "other_airport": "KLAS"
+    },
     {
       "direction": "departure",
       "icao24": "abf0fd",
