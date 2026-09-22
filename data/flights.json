@@ -1,7 +1,15 @@
 {
   "airport": "KDRA",
-  "updated": "2026-09-21T20:01:45.627496+00:00",
+  "updated": "2026-09-22T00:10:55.745659+00:00",
   "events": [
+    {
+      "direction": "departure",
+      "icao24": "ae6c67",
+      "callsign": "TALON88",
+      "first_seen": 1790033333,
+      "last_seen": 1790034542,
+      "other_airport": "\u2014"
+    },
     {
       "direction": "departure",
       "icao24": "a1e916",
