@@ -1,7 +1,15 @@
 {
   "airport": "KDRA",
-  "updated": "2026-11-05T20:07:27.447226+00:00",
+  "updated": "2026-11-06T01:39:30.901437+00:00",
   "events": [
+    {
+      "direction": "departure",
+      "icao24": "a6b0a6",
+      "callsign": "N530CG",
+      "first_seen": 1793924188,
+      "last_seen": 1793924338,
+      "other_airport": "\u2014"
+    },
     {
       "direction": "departure",
       "icao24": "a0b8d6",
