@@ -1,7 +1,15 @@
 {
   "airport": "KDRA",
-  "updated": "2026-11-13T11:16:11.957299+00:00",
+  "updated": "2026-11-13T19:53:25.023514+00:00",
   "events": [
+    {
+      "direction": "departure",
+      "icao24": "adffe0",
+      "callsign": "STORMY2",
+      "first_seen": 1794598191,
+      "last_seen": 1794599597,
+      "other_airport": "\u2014"
+    },
     {
       "direction": "departure",
       "icao24": "a6b0a6",
@@ -9,6 +17,22 @@
       "first_seen": 1794528904,
       "last_seen": 1794528904,
       "other_airport": "\u2014"
+    },
+    {
+      "direction": "departure",
+      "icao24": "a97b00",
+      "callsign": "FENIX71",
+      "first_seen": 1794520471,
+      "last_seen": 1794524104,
+      "other_airport": "NV36"
+    },
+    {
+      "direction": "departure",
+      "icao24": "a8ef91",
+      "callsign": "ARZ675",
+      "first_seen": 1794520489,
+      "last_seen": 1794524100,
+      "other_airport": "NV36"
     },
     {
       "direction": "arrival",
